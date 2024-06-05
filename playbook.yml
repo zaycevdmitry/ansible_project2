@@ -1,7 +1,7 @@
 # playbook.yml
 - name: Setup new user, configure SSH, install Nginx, configure logrotate, create directory with a file, and add location to Nginx
   become: yes
-  hosts: web_servers
+  hosts: web_servers2
   vars:
     new_user: dmitry
     src_file: '/home/dima/github2/ansible_project2/roles/nginx_installation/files/default.conf'
