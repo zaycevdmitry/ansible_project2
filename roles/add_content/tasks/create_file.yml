@@ -7,7 +7,7 @@
     group: root
     mode: '0644'
 
-  - name: Create home.txt in /var/www/html
+- name: Create home.txt in /var/www/html
   copy:
     content: "Welcome home"
     dest: /var/www/html/home.txt
