@@ -10,7 +10,7 @@
 - name: Create home.txt in /var/www/html
   copy:
     content: "Welcome home"
-    dest: /var/www/html/home.txt
+    dest: /var/www/html/home.html
     owner: root
     group: root
     mode: '0644'
