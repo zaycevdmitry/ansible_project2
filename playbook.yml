@@ -15,5 +15,10 @@
     - add_content
 
   tasks:
-  - name: Restart Nginx at the end
-    meta: flush_handlers
+    - name: Restart SSH and Nginx services at the end
+      service:
+        name: "{{ item }}"
+        state: restarted
+      with_items:
+        - nginx
+        - ssh
