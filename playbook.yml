@@ -12,7 +12,7 @@
     - ssh_configuration
     - nginx_installation
     - nginx_logrotate
-    - web_content
+    - add_content
 
   tasks:
   - name: Restart Nginx at the end
