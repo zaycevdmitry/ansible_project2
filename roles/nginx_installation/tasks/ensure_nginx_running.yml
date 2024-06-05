@@ -1,0 +1,6 @@
+# roles/nginx_installation/tasks/ensure_nginx_running.yml
+- name: Ensure Nginx is running
+  service:
+    name: nginx
+    state: started
+    enabled: yes

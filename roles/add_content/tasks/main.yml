@@ -1,0 +1,3 @@
+# roles/web_content/tasks/main.yml
+- include_tasks: create_directory.yml
+- include_tasks: create_file.yml

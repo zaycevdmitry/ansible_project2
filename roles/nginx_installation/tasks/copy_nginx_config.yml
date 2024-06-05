@@ -1,0 +1,9 @@
+# roles/nginx_installation/tasks/copy_nginx_config.yml
+- name: Copy Nginx configuration file
+  ansible.builtin.copy:
+    src: '{{ src_file }}'
+    dest: '{{ dest_file }}'
+    owner: root
+    group: root
+    mode: '0644'
+  notify: Restart Nginx

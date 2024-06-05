@@ -1,0 +1,23 @@
+# roles/nginx_logrotate/tasks/configure_logrotate.yml
+- name: Configure logrotate for Nginx logs
+  copy:
+    content: |
+      /var/log/nginx/*.log {
+          daily
+          missingok
+          rotate 3
+          compress
+          delaycompress
+          notifempty
+          create 0640 www-data adm
+          sharedscripts
+          postrotate
+              if [ -f /var/run/nginx.pid ]; then
+                  kill -USR1 `cat /var/run/nginx.pid`
+              fi
+          endscript
+      }
+    dest: /etc/logrotate.d/nginx
+    owner: root
+    group: root
+    mode: '0644'

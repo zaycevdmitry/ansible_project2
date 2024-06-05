@@ -1,0 +1,4 @@
+# roles/user_management/tasks/main.yml
+- include_tasks: ensure_sudo_group.yml
+- include_tasks: create_new_user.yml
+- include_tasks: setup_authorized_key.yml

@@ -1,0 +1,8 @@
+# roles/web_content/tasks/create_directory.yml
+- name: Create /var/www/egov directory
+  file:
+    path: /var/www/egov
+    state: directory
+    owner: root
+    group: root
+    mode: '0755'

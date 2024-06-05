@@ -1,0 +1,4 @@
+# roles/nginx_installation/tasks/main.yml
+- include_tasks: install_nginx.yml
+- include_tasks: ensure_nginx_running.yml
+- include_tasks: copy_nginx_config.yml

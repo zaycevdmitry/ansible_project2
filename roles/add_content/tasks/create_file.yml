@@ -1,0 +1,16 @@
+# roles/add_content/tasks/create_file.yml
+- name: Create file1.txt in /var/www/egov
+  copy:
+    content: "This is file1.txt"
+    dest: /var/www/egov/file1.txt
+    owner: root
+    group: root
+    mode: '0644'
+
+  - name: Create home.txt in /var/www/html
+  copy:
+    content: "Welcome home"
+    dest: /var/www/html/home.txt
+    owner: root
+    group: root
+    mode: '0644'

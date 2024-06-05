@@ -1,0 +1,5 @@
+# roles/ssh_configuration/tasks/restart_ssh.yml
+- name: Restart SSH service
+  service:
+    name: ssh
+    state: restarted

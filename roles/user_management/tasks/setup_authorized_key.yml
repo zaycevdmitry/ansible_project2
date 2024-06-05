@@ -1,0 +1,6 @@
+# roles/user_management/tasks/setup_authorized_key.yml
+- name: Set up authorized key for new user
+  ansible.posix.authorized_key:
+    user: "{{ new_user }}"
+    state: present
+    key: "{{ lookup('file', '/home/dima/.ssh/id_rsa.pub') }}"

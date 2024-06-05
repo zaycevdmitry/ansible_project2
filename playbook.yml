@@ -1,0 +1,15 @@
+# playbook.yml
+- name: Setup new user, configure SSH, install Nginx, configure logrotate, create directory with a file, and add location to Nginx
+  become: yes
+  hosts: web_servers
+  vars:
+    new_user: dmitry
+    src_file: '/home/dima/github/files/default.conf'
+    dest_file: '/etc/nginx/conf.d/default.conf'
+
+  roles:
+    - user_management
+    - ssh_configuration
+    - nginx_installation
+    - nginx_logrotate
+    - web_content

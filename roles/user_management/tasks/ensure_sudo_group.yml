@@ -1,0 +1,5 @@
+# roles/user_management/tasks/ensure_sudo_group.yml
+- name: Ensure the sudo group exists
+  group:
+    name: sudo
+    state: present

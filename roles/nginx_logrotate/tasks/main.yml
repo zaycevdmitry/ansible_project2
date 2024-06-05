@@ -1,0 +1,2 @@
+# roles/nginx_logrotate/tasks/main.yml
+- include_tasks: configure_logrotate.yml

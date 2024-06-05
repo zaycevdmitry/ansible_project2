@@ -1,0 +1,8 @@
+# roles/ssh_configuration/tasks/disable_root_ssh.yml
+- name: Disable root SSH access
+  lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: '^PermitRootLogin'
+    line: 'PermitRootLogin no'
+    state: present
+  notify: Restart SSH service
