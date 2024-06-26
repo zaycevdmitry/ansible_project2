@@ -1,0 +1,2 @@
+# roles/configurate_firewall/tasks/main.yml
+- include_tasks: allow_ports.yml
